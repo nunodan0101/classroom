@@ -44,7 +44,6 @@ const { config } = require('dotenv');
 app.use('/', classroomRoutes);
 
 // ==== 4) サーバー起動 ====
-const PORT = 3000;
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Server running on port ${PORT}`);
 });
