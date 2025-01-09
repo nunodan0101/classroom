@@ -1,0 +1,108 @@
+<!-- temp -->
+
+<!-- views/index.ejs -->
+<%- include('partials/header') %>
+
+<div class="container my-3 px-0 px-md-3">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-12">
+      <div class="card search-form-card">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4 search-card-title">空き教室検索</h2>
+          <form action="/search" method="GET">
+            <div class="row g-3">
+              <!-- 号館選択フィールド -->
+              <div class="col-12 col-md-6">
+                <label for="building" class="form-label">号館</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="building-addon">
+                    <i class="bi bi-building"></i>
+                  </span>
+                  <select class="form-select" id="building" name="building" required>
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="1号館">1号館</option>
+                    <option value="2号館">2号館</option>
+                    <option value="3号館">3号館</option>
+                    <option value="4号館">4号館</option>
+                    <option value="5号館">5号館</option>
+                    <option value="6号館">6号館</option>
+                    <option value="7号館">7号館</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 階数選択フィールド -->
+              <div class="col-12 col-md-6">
+                <label for="floor" class="form-label">階数</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="floor-addon">
+                    <i class="bi bi-chevron-double-up"></i>
+                  </span>
+                  <select class="form-select" id="floor" name="floor" required>
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="-1">B1階</option>
+                    <option value="1">1階</option>
+                    <option value="2">2階</option>
+                    <option value="3">3階</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 曜日選択フィールド -->
+              <div class="col-12 col-md-6">
+                <label for="dayOfWeek" class="form-label">曜日</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="dayOfWeek-addon">
+                    <i class="bi bi-calendar-week"></i>
+                  </span>
+                  <select class="form-select" id="dayOfWeek" name="dayOfWeek" required>
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="月">月</option>
+                    <option value="火">火</option>
+                    <option value="水">水</option>
+                    <option value="木">木</option>
+                    <option value="金">金</option>
+                    <option value="土">土</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 時限選択フィールド -->
+              <div class="col-12 col-md-6">
+                <label for="period" class="form-label">時限</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="period-addon">
+                    <i class="bi bi-clock"></i>
+                  </span>
+                  <select class="form-select" id="period" name="period" required>
+                    <option value="" disabled selected>選択してください</option>
+                    <option value="1">1時限</option>
+                    <option value="2">2時限</option>
+                    <option value="3">3時限</option>
+                    <option value="4">4時限</option>
+                    <option value="5">5時限</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- 検索ボタン -->
+            <div class="mt-4 d-grid">
+              <button type="submit" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center search-btn">
+                <!-- SVGアイコン -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-search search-icon me-2" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+                検索
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (必要であれば) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<%- include('partials/footer') %>

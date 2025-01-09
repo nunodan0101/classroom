@@ -1,0 +1,122 @@
+/* public/css/styles.css */
+
+/* 全体のフォントと背景 */
+body {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #f0f2f5;
+    color: #333333;
+}
+
+header {
+    background-color: #00a8e8;
+}
+
+/* カードのスタイル */
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* カードボディのスタイル */
+.search-form-card {
+    background-color: #ffffff;
+    padding: 40px 40px 20px 40px; /* 上, 右, 下, 左 */
+    border-radius: 20px;
+}
+
+/* 検索フォームのカードタイトルの下線 */
+.search-form-card .search-card-title::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: #007bff;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+/* 検索結果のカードスタイル */
+.search-result-card {
+    background-color: #ffffff;
+    padding: 15px; /* フォームと異なるパディング */
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* フォームラベルのスタイル */
+.form-label {
+    font-weight: 600;
+    color: #555555;
+}
+
+.form-select:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    border-color: #80bdff;
+}
+
+/* ボタンのスタイル */
+.search-btn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.search-btn:active {
+    background-color: #004080;
+} 
+
+/* SVGアイコンのスタイル */
+.search-icon {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
+/* フォームグループのスタイル */
+.input-group-text {
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 10px 0 0 10px;
+}
+
+/* フォームフィールドの入力グループ */
+.input-group {
+    margin-bottom: 5px;
+}
+
+/* バリデーションメッセージのスタイル */
+.invalid-feedback {
+    display: none;
+}
+
+.was-validated .invalid-feedback {
+    display: block;
+}
+
+/* カードにホバー効果を追加 */
+.search-result-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+}
+
+/* 検索条件のラベル部分 */
+/* .condition-label {
+    font-weight: 600;
+    color: #0056b3;
+} */
+
+/* 検索条件の値部分 */
+.condition-value {
+    font-weight: 700;
+}

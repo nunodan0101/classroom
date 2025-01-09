@@ -1,0 +1,17 @@
+{
+  "name": "classroom-reservation",
+  "version": "1.0.0",
+  "description": "Classroom reservation sample",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mongoose": "^5.13.23"
+  }
+}
