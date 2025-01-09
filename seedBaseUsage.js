@@ -4,9 +4,13 @@ const Classroom = require('./models/Classroom');
 const BaseUsage = require('./models/BaseUsage');
 
 // MongoDB接続設定
-mongoose.connect('mongodb://127.0.0.1:27017/classroomDB', {
+const dburl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/classroomDB';
+
+mongoose.connect(dburl, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  tls: true,
+  tlsAllowInvalidCertificates: false, // セキュリティのためfalseを推奨
 })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
