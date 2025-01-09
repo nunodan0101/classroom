@@ -3,9 +3,9 @@
 
 <div class="container my-4 px-0 px-md-3">
     <h2>検索結果</h2>
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-4">
       <!-- 検索条件をスタイリング -->
-      <p class="mb-0 search-conditions">
+      <p class="mb-3 mb-md-0 search-conditions w-100">
         <span class="condition-label">号館:</span> 
         <span class="condition-value"><%= building %></span>, 
         <span class="condition-label">階:</span> 
@@ -16,7 +16,7 @@
         <span class="condition-value"><%= period %></span>
       </p>
         <!-- 図面を見るボタンを概要部分の右側に追加 -->
-        <a href="/floorplan/<%= encodeURIComponent(building) %>/<%= floor %>" class="btn btn-info">図面を見る</a>
+        <a href="/floorplan/<%= encodeURIComponent(building) %>/<%= floor %>" class="btn btn-info align-self-start align-self-md-center">図面を見る</a>
     </div>
   
     <!-- 教室一覧をグリッド表示 -->
