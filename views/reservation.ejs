@@ -5,9 +5,9 @@
   <h2><%= classroom.name %> の予約</h2>
   <p class="mb-0 search-conditions">
     <span class="condition-label">号館:</span> 
-    <span class="condition-value"><%= building %></span>, 
+    <span class="condition-value"><%= building.replace(/号館$/, '') %></span>, 
     <span class="condition-label">階:</span> 
-    <span class="condition-value"><%= floor %></span>, 
+    <span class="condition-value"><%=  floor.replace(/階$/, '') %></span>, 
     <span class="condition-label">曜日:</span> 
     <span class="condition-value"><%= dayOfWeek %></span>, 
     <span class="condition-label">時限:</span> 
