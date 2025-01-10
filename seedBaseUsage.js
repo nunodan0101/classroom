@@ -19,6 +19,8 @@ mongoose.connect(dburl, {
 // ここで各教室の曜日・時限の使用状況を設定します。
 // 必要に応じて以下のデータを編集してください。
 
+//１号館、月、３と４限は完成
+
 const officialUsages = [
   // 1B階 (地下一階)
   { classroomName: '1BB', dayOfWeek: '月', period: '3' },
